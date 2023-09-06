@@ -22,7 +22,7 @@ There are two member functions, getId() and getName(), which provide access to t
 class Employee {
 public:
     Employee(int id, const std::string& name) : id(id), name(name) {}
-
+int I = 0;
     int getId() const {
         return id;
     }
@@ -60,6 +60,7 @@ public:
     bool operator()(const Employee& employee) {
 
         return employee.getId() == targetId;
+        I++;
     }
 
 private:
